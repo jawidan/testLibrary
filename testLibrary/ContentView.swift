@@ -9,13 +9,23 @@ import SwiftUI
 import MapKit
 
 struct ContentView: View {
+    
+    @State private var image: Image? = Image("turtlerock") // Default image
+    @State private var showingImagePicker = false
+    
     var body: some View {
         VStack {
             ScrollView{
                 MapView()
                     .frame(height: 300)
                 
-                CircleImage()
+                CircleImage(image: $image )
+                    .onTapGesture {
+                        showingImagePicker = true
+                    }
+                    .sheet(isPresented: $showingImagePicker) {
+                        ImagePicker(image: $image)
+                    }
                     .offset(y: -130)
                     .padding(.bottom, -130)
                 
@@ -48,7 +58,9 @@ struct ContentView: View {
                 
                 Spacer()
             }
+            
         }
+        
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7932CF9C2B840A7D00BFCC9A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932CF9B2B840A7D00BFCC9A /* ImagePicker.swift */; };
 		7962B13E2B54954D00710345 /* HistoryComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7962B13D2B54954D00710345 /* HistoryComponentView.swift */; };
 		79AC0CC62B051BBD0036EE6F /* testLibraryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC0CC52B051BBD0036EE6F /* testLibraryApp.swift */; };
 		79AC0CC82B051BBD0036EE6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC0CC72B051BBD0036EE6F /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7932CF9B2B840A7D00BFCC9A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		7962B13D2B54954D00710345 /* HistoryComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryComponentView.swift; sourceTree = "<group>"; };
 		79AC0CC22B051BBD0036EE6F /* testLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79AC0CC52B051BBD0036EE6F /* testLibraryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testLibraryApp.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				79C45A822B052856004433CF /* MapView.swift */,
 				79C45A842B052892004433CF /* CircleImageView.swift */,
 				7962B13D2B54954D00710345 /* HistoryComponentView.swift */,
+				7932CF9B2B840A7D00BFCC9A /* ImagePicker.swift */,
 			);
 			path = testLibrary;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				79C45A852B052892004433CF /* CircleImageView.swift in Sources */,
 				79AC0CC82B051BBD0036EE6F /* ContentView.swift in Sources */,
 				79C45A832B052856004433CF /* MapView.swift in Sources */,
+				7932CF9C2B840A7D00BFCC9A /* ImagePicker.swift in Sources */,
 				79AC0CC62B051BBD0036EE6F /* testLibraryApp.swift in Sources */,
 				7962B13E2B54954D00710345 /* HistoryComponentView.swift in Sources */,
 			);

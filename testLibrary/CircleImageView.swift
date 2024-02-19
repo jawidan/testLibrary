@@ -7,21 +7,39 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct CircleImage: View {
+    @Binding var image: Image? // Accept an optional Image
+
     var body: some View {
-        Image("turtlerock")
-            .resizable() // Add this to allow the image to be resized
-            .aspectRatio(contentMode: .fill) // Preserve the aspect ratio while filling the frame
-            .frame(width: 250, height: 250) // Set the fixed frame size for the image
-            .clipShape(Circle())
-            .overlay(
-                Circle().stroke(Color.white, lineWidth: 4)
-            )
-            .shadow(radius: 7)
+        if let image = image {
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 250, height: 250)
+                .clipShape(Circle())
+                .overlay(
+                    Circle().stroke(Color.white, lineWidth: 4)
+                )
+                .shadow(radius: 7)
+        } else {
+            // Provide a default view or placeholder for when the image is nil
+            Image("placeholder") // Use a placeholder image or some other view
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 250, height: 250)
+                .clipShape(Circle())
+                .overlay(
+                    Circle().stroke(Color.white, lineWidth: 4)
+                )
+                .shadow(radius: 7)
+        }
     }
 }
 
 
-#Preview {
-    CircleImage()
-}
+
+//#Preview {
+//    CircleImage(image: Image("turle"))
+//}
