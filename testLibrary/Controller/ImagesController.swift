@@ -27,7 +27,7 @@ class ImagesController {
     func fetchSavedImage(context: NSManagedObjectContext) -> UIImage? {
         let fetchRequest = NSFetchRequest<PhotoEntity>(entityName: "PhotoEntity")
 
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)] // Assuming you have a creationDate attribute
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)] 
         fetchRequest.fetchLimit = 1
         
         do {

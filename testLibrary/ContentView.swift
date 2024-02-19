@@ -11,10 +11,10 @@ import CoreData
 
 struct ContentView: View {
     
+    @Environment(\.managedObjectContext) private var viewContext
+
     @State private var image: Image? = Image("turtlerock") // Default image
     @State private var showingImagePicker = false
-    
-    @Environment(\.managedObjectContext) private var viewContext
     @State private var inputImage: UIImage?
     
     var body: some View {
@@ -32,9 +32,10 @@ struct ContentView: View {
                     }
                     .offset(y: -130)
                     .padding(.bottom, -130)
-                    .onChange(of: inputImage) { _ in
+                    .onChange(of: inputImage) { oldValue, newValue in
                         loadImage()
                     }
+
                 
                 
                 VStack(alignment: .leading) {
@@ -77,7 +78,7 @@ struct ContentView: View {
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
-        ImagesController.shared.saveImage(image: inputImage, context: viewContext)
+//        ImagesController.shared.saveImage(image: inputImage, context: viewContext)
     }
     
     func loadImageFromCoreData() {
