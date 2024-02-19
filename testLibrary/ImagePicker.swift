@@ -43,7 +43,7 @@ struct ImagePicker: UIViewControllerRepresentable {
                 ImagesController.shared.saveImage(image: uiImage, context: viewContext)
                 
                 
-                print(ImagesController.shared.fetchSavedImage(context: viewContext))
+//                print(ImagesController.shared.fetchSavedImage(context: viewContext))
             }
 
             parent.presentationMode.wrappedValue.dismiss()
