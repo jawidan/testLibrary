@@ -23,18 +23,7 @@ struct CircleImage: View {
                     Circle().stroke(Color.white, lineWidth: 4)
                 )
                 .shadow(radius: 7)
-        } else {
-            // Provide a default view or placeholder for when the image is nil
-            Image("placeholder") // Use a placeholder image or some other view
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 250, height: 250)
-                .clipShape(Circle())
-                .overlay(
-                    Circle().stroke(Color.white, lineWidth: 4)
-                )
-                .shadow(radius: 7)
-        }
+        } 
     }
 }
 
