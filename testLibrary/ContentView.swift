@@ -78,7 +78,6 @@ struct ContentView: View {
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
-//        ImagesController.shared.saveImage(image: inputImage, context: viewContext)
     }
     
     func loadImageFromCoreData() {
