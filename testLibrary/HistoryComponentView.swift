@@ -27,7 +27,7 @@ struct WorkHistoryView: View {
 """
     
     var workHistoryData : [WorkHistoryItem] = [
-        WorkHistoryItem(title: "SEB | Baltic", subtitle: "2024 - present", content: "iOS Engineer", imageName: "seb"),
+//        WorkHistoryItem(title: "SEB | Baltic", subtitle: "2024 - present", content: "iOS Engineer", imageName: "seb"),
         WorkHistoryItem(title: "Bank Respublika OJSC", subtitle: "2021 - 2023", content: brWorkExperience, imageName: "br")
     ]
     
