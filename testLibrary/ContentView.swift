@@ -7,11 +7,15 @@
 
 import SwiftUI
 import MapKit
+import CoreData
 
 struct ContentView: View {
     
     @State private var image: Image? = Image("turtlerock") // Default image
     @State private var showingImagePicker = false
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    @State private var inputImage: UIImage?
     
     var body: some View {
         VStack {
@@ -28,6 +32,9 @@ struct ContentView: View {
                     }
                     .offset(y: -130)
                     .padding(.bottom, -130)
+                    .onChange(of: inputImage) { _ in
+                        loadImage()
+                    }
                 
                 
                 VStack(alignment: .leading) {
@@ -61,8 +68,25 @@ struct ContentView: View {
             
         }
         .edgesIgnoringSafeArea(.all)
+        .onAppear {
+            loadImageFromCoreData()
+        }
         
     }
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
+        ImagesController.shared.saveImage(image: inputImage, context: viewContext)
+    }
+    
+    func loadImageFromCoreData() {
+        if let savedImage = ImagesController.shared.fetchSavedImage(context: viewContext) {
+            self.image = Image(uiImage: savedImage)
+        }
+    }
+    
+    
 }
 
 
