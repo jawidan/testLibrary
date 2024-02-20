@@ -13,7 +13,7 @@ struct ContentView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
 
-    @State private var image: Image? = Image("turtlerock") // Default image
+    @State private var image: Image? = Image("turtlerock")
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     
@@ -23,10 +23,9 @@ struct ContentView: View {
                 MapView()
                     .frame(height: 300)
                 
-                CircleImage(image: $image )
-                    .onTapGesture {
-                        showingImagePicker = true
-                    }
+                CircleImage(image: $image, tapAction: {
+                    showingImagePicker = true
+                })
                     .sheet(isPresented: $showingImagePicker) {
                         ImagePicker(image: $image)
                     }
@@ -37,32 +36,11 @@ struct ContentView: View {
                     }
 
                 
-                
-                VStack(alignment: .leading) {
-                    Text("Javidan Ibrahimov")
-                        .font(.title)
-                    HStack {
-                        Text("iOS Engineer, MSc Computer Science")
-                        Spacer()
-                        Text("Tartu, Estonia")
-                    }
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                    
-                    Divider()
-                    
-                    Text("About Javidan")
-                        .font(.title2)
-                    Text("MSc of Computer Science student at University of Tartu. I am a skilled iOS engineer with 2 years of work experience. I love to play video games and solve the rubiks cube. ")
-                }
-                .padding()
-                
+                InfoView(name: "Javidan Ibrahimov", bio: "iOS Developer and Fisher", location: "Tartu, Estonia")
                 
                 Spacer()
                 
-                
                 WorkHistoryView()
-                
                 
                 Spacer()
             }

@@ -11,6 +11,8 @@ import SwiftUI
 
 struct CircleImage: View {
     @Binding var image: Image? // Accept an optional Image
+    
+    var tapAction: () -> ()
 
     var body: some View {
         if let image = image {
@@ -23,8 +25,13 @@ struct CircleImage: View {
                     Circle().stroke(Color.white, lineWidth: 4)
                 )
                 .shadow(radius: 7)
-        } 
+                .onTapGesture {
+                    tapAction()
+                }
+        }
     }
+    
+    
 }
 
 

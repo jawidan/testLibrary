@@ -21,6 +21,7 @@
 		79AC0CE32B051BBE0036EE6F /* testLibraryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC0CE22B051BBE0036EE6F /* testLibraryUITestsLaunchTests.swift */; };
 		79C45A832B052856004433CF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C45A822B052856004433CF /* MapView.swift */; };
 		79C45A852B052892004433CF /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C45A842B052892004433CF /* CircleImageView.swift */; };
+		79EF6B192B84C5FA00A5C5E6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EF6B182B84C5FA00A5C5E6 /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		79AC0CE22B051BBE0036EE6F /* testLibraryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testLibraryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		79C45A822B052856004433CF /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		79C45A842B052892004433CF /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		79EF6B182B84C5FA00A5C5E6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				79C45A842B052892004433CF /* CircleImageView.swift */,
 				7962B13D2B54954D00710345 /* HistoryComponentView.swift */,
 				7932CF9B2B840A7D00BFCC9A /* ImagePicker.swift */,
+				79EF6B182B84C5FA00A5C5E6 /* InfoView.swift */,
 			);
 			path = testLibrary;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				7932CFA02B840FFA00BFCC9A /* DataModel.xcdatamodeld in Sources */,
 				7932CF9C2B840A7D00BFCC9A /* ImagePicker.swift in Sources */,
 				79AC0CC62B051BBD0036EE6F /* testLibraryApp.swift in Sources */,
+				79EF6B192B84C5FA00A5C5E6 /* InfoView.swift in Sources */,
 				7962B13E2B54954D00710345 /* HistoryComponentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
