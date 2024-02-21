@@ -18,6 +18,11 @@ struct ContentView: View {
     @State private var inputImage: UIImage?
     
     var body: some View {
+        
+        var name : String = "Javidan Ibrahimov"
+        var bio : String = "iOS Developer and Gamer"
+        var locationString : String = "Tartu, Estonia"
+        
         VStack {
             ScrollView{
                 MapView()
@@ -36,7 +41,7 @@ struct ContentView: View {
                     }
 
                 
-                InfoView(name: "Javidan Ibrahimov", bio: "iOS Developer and Fisher", location: "Tartu, Estonia")
+                InfoView(name: name, bio: bio, location: locationString)
                 
                 Spacer()
                 
